@@ -11,7 +11,7 @@ import mdisk
 import split
 
 BOT_USERNAME = os.environ.get("BOT_USERNAME", "MdiskDownloadersBot")
-BOT_NAME = os.environ.get("BOT_NAME", "Mdisk Downloader Bot")
+BOT_NAME = os.environ.get("BOT_NAME", "Mdisk To File Bot")
 bot_token = os.environ.get("TOKEN", "5336784270:AAHLLAdyoCKLt5_XdV_Aj1UAqHLB5b_Li1g") 
 api_hash = os.environ.get("HASH", "db62aa57ef8162bb4c95d0cf81e1c09b") 
 api_id = os.environ.get("ID", "7651392") 
@@ -22,7 +22,7 @@ TG_SPLIT_SIZE = 2097151000
 
 @app.on_message(filters.command(["start", "help"]))
 def echo(client, message):
-       app.send_message(message.chat.id, f'**Hi 👋\n\nI Am {BOT_NAME}\n\nUse Me To Download Mdisk Link To Video\n\nSend Me The Mdisk Link Like ➡️\n /mdisk https://mdisk.me/convertr/250×380/asd12**',
+       app.send_message(message.chat.id, f'Hi 👋\n\nI Am {BOT_NAME}\n\nUse Me To Download Mdisk Link To 📁File\n\nSend Me The Mdisk Link Like ➡️\n /mdisk https://mdisk.me/link',
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -36,24 +36,24 @@ def echo(client, message):
 
 
 def down(v,a,message,link):
-    app.send_message(message.chat.id, '📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠....\n\n**Its Take Some Time Depend On Your File Size. Wait for Downloading ⬇️ do not 🗑 Delete bot before Download is Complete ✅**')
+    app.send_message(message.chat.id, '⬇️ Dᴏᴡɴʟᴏᴀᴅɪɴɢ.... Yᴏᴜʀ Lɪɴᴋ\n\n 💢 Wait for Downloading ⬇️ do not 🗑 Delete bot before Download is Complete ✅')
     file = mdisk.mdow(link,v,a,message)
     size = split.get_path_size(file)
     #get_path_size = os.path.splitext(get_path_size)[0] + "." + "mkv"
     #size = os.stat(get_path_size).st_size
     if(size > 2097151000):
-        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n Now ✂ 𝗦𝗽𝗹𝗶𝘁𝗶𝗻𝗴 ↔️ Your 📁File \n So you Got ✌ Two 📁Files Or More Than 2 Files.\n\n\n ⚜️ Rᴇᴀsᴏɴ : ғɪʟᴇ sɪᴢᴇ ɪs ʙɪɢɢᴇʀ ᴛʜᴇɴ 𝟸ɢʙ.')
+        app.send_message(message.chat.id, 'Congratulations🎉\n ⤵️ Your Link 🔗 is ⬇️ Downloaded Successfully ✅ as A File 📁\n\n ↪️ Now ✂ Sᴘʟɪᴛɪɴɢ ↔️ Your 📁File to Uᴘʟᴏᴀᴅ ⬆️\n\n\n ⚜️ Rᴇᴀsᴏɴ : ғɪʟᴇ sɪᴢᴇ ɪs ʙɪɢɢᴇʀ ᴛʜᴇɴ 𝟸ɢʙ.')
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         os.remove(file)
-        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n 🔸 And After Process Your Mdisk Link 🔗 Video 📁File is Started to Uploading ⬆️\n\n\n ⚜️ Nᴏᴛɪᴄᴇ : ᴅᴏ ɴᴏᴛ ᴅᴇʟᴇᴛᴇ ᴄʜᴀᴛ ʙᴇғᴏʀᴇ ᴜᴘʟᴏᴀᴅɪɴɢ ɪs ᴅᴏɴᴇ.')
+        app.send_message(message.chat.id, ' ↪️ Now Your File📁 is Sᴘʟɪᴛᴇᴅ ✂ \n 🔸 Your 📁File Uploading ⬆️ Started.\n\n\n ⚜️ Nᴏᴛɪᴄᴇ : ᴅᴏ ɴᴏᴛ ᴅᴇʟᴇᴛᴇ ᴄʜᴀᴛ ʙᴇғᴏʀᴇ ᴜᴘʟᴏᴀᴅɪɴɢ ɪs ᴅᴏɴᴇ.')
         i = 1
         for ele in flist:
             app.send_document(message.chat.id,document=ele,caption=f"part {i}")
             i = i + 1
             os.remove(ele)
     else: 
-        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n 🔸 Now Your Mdisk Link🔗 Video 📁File Starting to Upload ⬆️ In Single File.\n▪️ Yᴏᴜʀ ғɪʟᴇ ɴᴀᴍᴇ ɪs sᴀᴍᴇ ᴀs ʟɪɴᴋ ɴᴀᴍᴇ.\n\n Hᴇʏ You Can Rename this 📁File or Add Custom Thumbnail 🖼 on using this Bot\n\n <a href="https://t.me/file_thumbnail_bot"> 🖼Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ Fɪʟᴇ Rᴇɴᴀᴍᴇ ʙᴏᴛ</a>\n\n ❤ ᴛʜᴀɴᴋs ᴛᴏ ᴜsᴇ ᴍᴇ')
+        app.send_message(message.chat.id, 'Congratulations🎉\n⤵️ Your Link 🔗 is ⬇️ Downloaded Successfully ✅ as A File 📁\n\n ↪️ Now Your 📁File Uploading ⬆️ Started In Single File.\n▪️ Yᴏᴜʀ ғɪʟᴇ ɴᴀᴍᴇ ɪs sᴀᴍᴇ ᴀs ʟɪɴᴋ ɴᴀᴍᴇ.\n\n Hᴇʏ You Can Rename this 📁File or Add Custom Thumbnail 🖼 on using this Bot\n\n <a href="https://t.me/file_thumbnail_bot"> 🖼Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ Fɪʟᴇ Rᴇɴᴀᴍᴇ ʙᴏᴛ</a>\n\n ❤ ᴛʜᴀɴᴋs ᴛᴏ ᴜsᴇ ᴍᴇ')
         app.send_document(message.chat.id,document=file)
         os.remove(file)
 
@@ -69,7 +69,7 @@ def echo(client, message):
             with open(f"{message.chat.id}.txt","w") as ci:
                 ci.write(link)
     except:
-        app.send_message(message.chat.id, '**❎ Wrong Method 🔄 Send /mdisk https://mdisk.me/link \n\n ↔️ Iɴ Bᴇᴛᴡᴇᴇɴ Tʜᴇ Cᴏᴍᴍᴀɴᴅ Aɴᴅ Mᴅɪsᴋ Lɪɴᴋ Gɪᴠᴇ ᴀ Sᴘᴀᴄᴇ.**')
+        app.send_message(message.chat.id, '❎ Wrong Method 🔄 Send me\n /mdisk https://mdisk.me/link \n\n ↔️ Iɴ Bᴇᴛᴡᴇᴇɴ Tʜᴇ Cᴏᴍᴍᴀɴᴅ Aɴᴅ Mᴅɪsᴋ Lɪɴᴋ Gɪᴠᴇ ᴀ Sᴘᴀᴄᴇ.')
 
               
 @app.on_message(filters.text)
@@ -84,10 +84,10 @@ def echo(client, message):
             d.start()
             #await down(ids[0],ids[1],message,link)
         else:
-            app.send_message(message.chat.id, "**🥇First Send Me The Mdisk Link🔗 With Command /mdisk**")
+            app.send_message(message.chat.id, "🥇First Send Me The Mdisk Link🔗 With Command /mdisk")
 
 
 
 app.run()
 app.start()
-print("\n\nMdisk Link Downloader Bot Started")
+print("\n\nMdisk To File Bot Started")
