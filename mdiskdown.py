@@ -42,7 +42,7 @@ def down(v,a,message,link):
     #get_path_size = os.path.splitext(get_path_size)[0] + "." + "mkv"
     #size = os.stat(get_path_size).st_size
     if(size > 2097151000):
-        app.send_message(message.chat.id, '𝗦𝗽𝗹𝗶𝘁𝗶𝗻𝗴 Your File Because it's size is over than 2.00 GB.\n\n So you Got ✌ Two 📁Files Or More Than 2 Files.\n\n 🔹 If Your 📁File size is over than 4.00 GB so you got more than ✌ Two 📁Files with devided in Part 1 , Part 2 or more.')
+        app.send_message(message.chat.id, ' ✂ 𝗦𝗽𝗹𝗶𝘁𝗶𝗻𝗴 Your File Because it's size is over than 2.00 GB.\n\n So you Got ✌ Two 📁Files Or More Than 2 Files.')
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         os.remove(file)
