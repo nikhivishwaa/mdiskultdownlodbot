@@ -1,0 +1,18 @@
+{
+  "name": "Mdisk To File Bot",
+   "description": "Bot to download video from mdisk links",
+    "repository": "https://github.com/nikhivishwa/Mxlinktofile",
+  "keywords": ["Python", "Heroku"],
+  "addons": ["heroku-postgresql:hobby-dev", "scheduler:standard"],
+"env": {
+    "TOKEN": {
+      "description": "Bot API Token, get it at @botfather"
+    },
+    "ID":{
+      "description": "API HASH ID, get it at https://my.telegram.org/auth?to=apps"
+    },
+    "HASH":{
+      "description": "API HASH, get it at https://my.telegram.org/auth?to=apps"
+    }
+  }
+}
