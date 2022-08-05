@@ -53,7 +53,7 @@ def down(v,a,message,link):
             i = i + 1
             os.remove(ele)
     else: 
-        app.send_message(message.chat.id, '𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠')
+        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n 🔸 Now Your Mdisk Link🔗 Video 📁File Starting to Upload ⬆️ In Single File.\n\n\n ▪️ Yᴏᴜʀ ғɪʟᴇ ɴᴀᴍᴇ ɪs sᴀᴍᴇ ᴀs ʟɪɴᴋ ɴᴀᴍᴇ.\n\n Are You Wants to Rename this 📁File or Add Custom Thumbnail 🖼 on this File So use this Bot\n <a href="https://t.me/file_thumbnail_bot"> Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ Fɪʟᴇ Rᴇɴᴀᴍᴇ bot</a>')
         app.send_document(message.chat.id,document=file)
         os.remove(file)
 
