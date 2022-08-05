@@ -36,7 +36,7 @@ def echo(client, message):
 
 
 def down(v,a,message,link):
-    app.send_message(message.chat.id, '📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠....\n\n**Its Take Some Time Depend On Your File Size. Wait for Downloading ⬇️ don't Skip before Download is Complete ✅**'
+    app.send_message(message.chat.id, '📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠....\n\n**Its Take Some Time Depend On Your File Size. Wait for Downloading ⬇️ do not 🗑 Delete bot before Download is Complete ✅**'
      reply_markup=InlineKeyboardMarkup(
          [
              [
