@@ -42,11 +42,11 @@ def down(v,a,message,link):
     #get_path_size = os.path.splitext(get_path_size)[0] + "." + "mkv"
     #size = os.stat(get_path_size).st_size
     if(size > 2097151000):
-        app.send_message(message.chat.id, ' ✂ 𝗦𝗽𝗹𝗶𝘁𝗶𝗻𝗴 Your 📁File \n\n So you Got ✌ Two 📁Files Or More Than 2 Files.')
+        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n Now ✂ 𝗦𝗽𝗹𝗶𝘁𝗶𝗻𝗴 ↔️ Your 📁File \n So you Got ✌ Two 📁Files Or More Than 2 Files.\n\n\n ⚜️ Rᴇᴀsᴏɴ : ғɪʟᴇ sɪᴢᴇ ɪs ʙɪɢɢᴇʀ ᴛʜᴇɴ 𝟸ɢʙ.')
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         os.remove(file)
-        app.send_message(message.chat.id, '𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠')
+        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n 🔸 And After Process Your Mdisk Link 🔗 Video 📁File is Started to Uploading ⬆️\n\n\n ⚜️ Nᴏᴛɪᴄᴇ : ᴅᴏ ɴᴏᴛ ᴅᴇʟᴇᴛᴇ ᴄʜᴀᴛ ʙᴇғᴏʀᴇ ᴜᴘʟᴏᴀᴅɪɴɢ ɪs ᴅᴏɴᴇ.')
         i = 1
         for ele in flist:
             app.send_document(message.chat.id,document=ele,caption=f"part {i}")
