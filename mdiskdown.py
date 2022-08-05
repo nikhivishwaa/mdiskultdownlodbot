@@ -53,7 +53,7 @@ def down(v,a,message,link):
             i = i + 1
             os.remove(ele)
     else: 
-        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n 🔸 Now Your Mdisk Link🔗 Video 📁File Starting to Upload ⬆️ In Single File.\n\n\n ▪️ Yᴏᴜʀ ғɪʟᴇ ɴᴀᴍᴇ ɪs sᴀᴍᴇ ᴀs ʟɪɴᴋ ɴᴀᴍᴇ.\n\n Are You Wants to Rename this 📁File or Add Custom Thumbnail 🖼 on this File So use this Bot\n <a href="https://t.me/file_thumbnail_bot"> Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ Fɪʟᴇ Rᴇɴᴀᴍᴇ ʙᴏᴛ</a>')
+        app.send_message(message.chat.id, 'Congratulations🎉\n\n Your Mdisk Link🔗 Video 📁File is ⬇️ Downloaded Successfully ✅.\n\n 🔸 Now Your Mdisk Link🔗 Video 📁File Starting to Upload ⬆️ In Single File.\n▪️ Yᴏᴜʀ ғɪʟᴇ ɴᴀᴍᴇ ɪs sᴀᴍᴇ ᴀs ʟɪɴᴋ ɴᴀᴍᴇ.\n\n Hᴇʏ You Can Rename this 📁File or Add Custom Thumbnail 🖼 on using this Bot\n\n <a href="https://t.me/file_thumbnail_bot"> 🖼Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ Fɪʟᴇ Rᴇɴᴀᴍᴇ ʙᴏᴛ</a>\n\n ❤ ᴛʜᴀɴᴋs ᴛᴏ ᴜsᴇ ᴍᴇ')
         app.send_document(message.chat.id,document=file)
         os.remove(file)
 
@@ -69,7 +69,7 @@ def echo(client, message):
             with open(f"{message.chat.id}.txt","w") as ci:
                 ci.write(link)
     except:
-        app.send_message(message.chat.id, '**Wrong Method Send /mdisk Link**')
+        app.send_message(message.chat.id, '**❎ Wrong Method 🔄 Send /mdisk https://mdisk.me/link \n\n ↔️ Iɴ Bᴇᴛᴡᴇᴇɴ Tʜᴇ Cᴏᴍᴍᴀɴᴅ Aɴᴅ Mᴅɪsᴋ Lɪɴᴋ Gɪᴠᴇ ᴀ Sᴘᴀᴄᴇ.**')
 
               
 @app.on_message(filters.text)
@@ -84,7 +84,7 @@ def echo(client, message):
             d.start()
             #await down(ids[0],ids[1],message,link)
         else:
-            app.send_message(message.chat.id, "**First Send Me Link With /mdisk**")
+            app.send_message(message.chat.id, "**🥇First Send Me The Mdisk Link🔗 With Command /mdisk**")
 
 
 
