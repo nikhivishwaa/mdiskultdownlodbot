@@ -53,15 +53,5 @@
              The vmaf filter needs external files to work- see model/000-README.TXT
 
 
-      This static build is licensed under the GNU General Public License version 3.
-
-      
-      Patreon:  https://www.patreon.com/johnvansickle
-      Paypal:   https://www.paypal.me/johnvansickle 
-      Ethereum: 0x491f0b4bAd15FF178257D9Fa81ce87baa8b6E242 
-      Bitcoin:  3ErDdF5JeG9RMx2DXwXEeunrsc5dVHjmeq 
-      Dogecoin: DH4WZPTjwKh2TarQhkpQrKjHZ9kNTkiMNL
-
-      email: john.vansickle@gmail.com
       irc:   relaxed @ irc://chat.freenode.net #ffmpeg
       url:   https://johnvansickle.com/ffmpeg/
