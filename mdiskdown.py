@@ -36,7 +36,17 @@ def echo(client, message):
 
 
 def down(v,a,message,link):
-    app.send_message(message.chat.id, '📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠....\n\n**Its Take Time Depend On Your File Size**')
+    app.send_message(message.chat.id, '📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠....\n\n**Its Take Some Time Depend On Your File Size. Wait for Downloading ⬇️ don't Skip before Download is Complete ✅**'
+     reply_markup=InlineKeyboardMarkup(
+         [
+             [
+                 InlineKeyboardButton("📡 Visit Here ⏭️", url=f"https://t.me/ai_filter_bot"),
+             ],
+         ]
+     ),
+     disable_web_page_preview=False,
+)
+
     file = mdisk.mdow(link,v,a,message)
     size = split.get_path_size(file)
     #get_path_size = os.path.splitext(get_path_size)[0] + "." + "mkv"
