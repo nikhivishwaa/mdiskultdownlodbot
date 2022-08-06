@@ -1,7 +1,8 @@
 {
   "name": "Mdisk To File Bot",
    "description": "Bot to download video from mdisk links",
-    "repository": "https://github.com/nikhivishwa/Mxlinktofile",
+    "logo": "https://telegra.ph/file/5418b80ec820b36461430.jpg",
+   "repository": "https://github.com/nikhivishwa/Mxlinktofile",
   "keywords": ["Python", "Heroku"],
   "addons": ["heroku-postgresql:hobby-dev", "scheduler:standard"],
 "env": {
