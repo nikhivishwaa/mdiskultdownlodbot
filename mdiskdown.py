@@ -22,7 +22,7 @@ TG_SPLIT_SIZE = 2097151000
 
 @app.on_message(filters.command(["start", "help"]))
 def echo(client, message):
-       app.send_message(message.chat.id,(photo=" https://telegra.ph/file/3d10c6b1d67fdd95f701e.jpg", caption=f'Hi 👋\n\nI Am {BOT_NAME}\n\nUse Me To Download Mdisk Link To 📁File\n\nSend Me The Mdisk Link Like ➡️\n /mdisk https://mdisk.me/link'),
+       app.send_message(message.chat.id,photo=" https://telegra.ph/file/3d10c6b1d67fdd95f701e.jpg", caption=f'Hi 👋\n\nI Am {BOT_NAME}\n\nUse Me To Download Mdisk Link To 📁File\n\nSend Me The Mdisk Link Like ➡️\n /mdisk https://mdisk.me/link',
         reply_markup=InlineKeyboardMarkup(
             [
                 [
