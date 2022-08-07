@@ -36,24 +36,24 @@ def echo(client, message):
 
 
 def down(v,a,message,link):
-    app.send_message(message.chat.id, '⬇️ Dᴏᴡɴʟᴏᴀᴅɪɴɢ.... Yᴏᴜʀ Lɪɴᴋ\n\n 💢 Wait for Downloading ⬇️ do not 🗑 Delete bot before Download is Complete ✅')
+    app.send_message(message.chat.id, '📥 Dᴏᴡɴʟᴏᴀᴅɪɴɢ.... Yᴏᴜʀ Lɪɴᴋ\n\n I Nᴏᴛɪғʏ Yᴏᴜ Wʜᴇɴ Dᴏᴡɴʟᴏᴀᴅ 📁 Is Cᴏᴍᴘʟᴇᴛᴇ.')
     file = mdisk.mdow(link,v,a,message)
     size = split.get_path_size(file)
     #get_path_size = os.path.splitext(get_path_size)[0] + "." + "mkv"
     #size = os.stat(get_path_size).st_size
     if(size > 2097151000):
-        app.send_message(message.chat.id, 'Congratulations🎉\n ⤵️ Your Link 🔗 is ⬇️ Downloaded Successfully ✅ as A File 📁\n\n ↪️ Now ✂ Sᴘʟɪᴛɪɴɢ ↔️ Your 📁File to Uᴘʟᴏᴀᴅ ⬆️\n\n\n ⚜️ Rᴇᴀsᴏɴ : ғɪʟᴇ sɪᴢᴇ ɪs ʙɪɢɢᴇʀ ᴛʜᴇɴ 𝟸ɢʙ.')
+        app.send_message(message.chat.id, '📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ ✅\n\n  Now ✂ Sᴘʟɪᴛɪɴɢ Your 📁File to below 2GB\n\n\n.')
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         os.remove(file)
-        app.send_message(message.chat.id, ' ↪️ Now Your File📁 is Sᴘʟɪᴛᴇᴅ ✂ \n 🔸 Your 📁File Uploading ⬆️ Started.\n\n\n ⚜️ Nᴏᴛɪᴄᴇ : ᴅᴏ ɴᴏᴛ ᴅᴇʟᴇᴛᴇ ᴄʜᴀᴛ ʙᴇғᴏʀᴇ ᴜᴘʟᴏᴀᴅɪɴɢ ɪs ᴅᴏɴᴇ.')
+        app.send_message(message.chat.id, '⚜️Your File📁 Sᴘʟɪᴛᴇᴅ 📖 \n\n 🔸 Now Uploading Your 📁File\n\n⚜️ ᴜsᴇ @File_Thumbnail_bot')
         i = 1
         for ele in flist:
             app.send_document(message.chat.id,document=ele,caption=f"part {i}")
             i = i + 1
             os.remove(ele)
     else: 
-        app.send_message(message.chat.id, 'Congratulations🎉\n⤵️ Your Link 🔗 is ⬇️ Downloaded Successfully ✅ as A File 📁\n\n ↪️ Now Your 📁File Uploading ⬆️ Started In Single File.\n▪️ Yᴏᴜʀ ғɪʟᴇ ɴᴀᴍᴇ ɪs sᴀᴍᴇ ᴀs ʟɪɴᴋ ɴᴀᴍᴇ.\n\n Hᴇʏ You Can Rename this 📁File or Add Custom Thumbnail 🖼 on using this Bot\n\n <a href="https://t.me/file_thumbnail_bot"> 🖼Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ Fɪʟᴇ Rᴇɴᴀᴍᴇ ʙᴏᴛ</a>\n\n ❤ ᴛʜᴀɴᴋs ᴛᴏ ᴜsᴇ ᴍᴇ')
+        app.send_message(message.chat.id, ' 📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ ✅ \n\n 🔸 Now 📤 Uploading Your 📁File\n\n⚜️ ᴜsᴇ @File_Thumbnail_bot')
         app.send_document(message.chat.id,document=file)
         os.remove(file)
 
