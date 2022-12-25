@@ -10,11 +10,11 @@ import threading
 import mdisk
 import split
 
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "Mdiso_To_File_Bot")
-BOT_NAME = os.environ.get("BOT_NAME", "Mdisk To File Bot")
-bot_token = os.environ.get("TOKEN", "5336784270:AAHLLAdyoCKLt5_XdV_Aj1UAqHLB5b_Lig") 
-api_hash = os.environ.get("HASH", "db62aa57ef8162bb4c950cf81e1c09b") 
-api_id = os.environ.get("ID", "7651382") 
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "MdiskDownloaderultronBot")
+BOT_NAME = os.environ.get("BOT_NAME", "Mdisk link Downloader")
+bot_token = os.environ.get("TOKEN", "5260749200:AAGAn7-UDsaUsf1P6a5m9FSflkZBJ9GTOBE") 
+api_hash = os.environ.get("HASH", "168c8159234070c260a85df74feae727") 
+api_id = os.environ.get("ID", "19977122") 
 
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
 
